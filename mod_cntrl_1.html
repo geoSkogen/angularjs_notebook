@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="#"/>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+
+</head>
+
+<body>
+
+<!--this defines a module and adds a controller-->
+<div ng-app="thisApp" ng-controller="thisControl">
+  <!--this binds the value of the input fields
+      to the application variable names-->
+  <p>my name is: <input type="text" ng-model="firstName"/>
+    <input type="text" ng-model="lastName"/></p>
+    <!--interpolates js expression into HTML-->
+  <p>your name is: {{firstName + " " + lastName}}</p>
+</div>
+
+</body>
+
+<script src="thisApp.js"></script>
+<script src="thisControl.js"></script>
+
+</html>

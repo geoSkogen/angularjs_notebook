@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="#"/>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+
+</head>
+
+<body>
+
+<!--this defines a module and adds a controller-->
+<div ng-app="thisApp" ng-controller="thisControl">
+  <!--this binds the value of the input fields
+      to the application variable names-->
+  <p>my name is: <input type="text" ng-model="firstName"/>
+    <input type="text" ng-model="lastName"/></p>
+    <!--interpolates js expression into HTML-->
+  <p>your name is: {{firstName + " " + lastName}}</p>
+</div>
+
+
+
+
+</body>
+
+<script>
+//create a object of the module FIND OUT WHAT'S UP WITH THIS EMPTY ARRAY
+var app = angular.module('thisApp', []);
+//call the controller method of the module object,
+//passing the controller name, and a callback
+//with a parameter that will become the object whose properties
+//are the variables bound to the ng-model declaration
+//it's like accessing the controller's namespace . . . ?
+app.controller('thisControl', function ($scope) {
+  $scope.firstName="Joseph";
+  $scope.lastName="Skogen";
+});
+</script>
+
+</html>
