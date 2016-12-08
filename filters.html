@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="#"/>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+
+</head>
+
+<body>
+
+<!--this defines a module and adds a controller-->
+<div ng-app="thisApp2" ng-controller="thisControlHash">
+<h3>order by last name</h3>
+  <ul>
+    <li ng-repeat="x in names | orderBy:'lname'">
+      {{ x.lname + ', ' + x.fname + ': ' + x.dept }}
+    </li>
+  </ul>
+<h3>convert number to currency</h3>
+  <ul>
+    <li ng-repeat="y in prices">
+      {{ y.day | currency}}, {{ y.month | currency}}, {{ y.year | currency}}
+    </li>
+  </ul>
+<h3>convert JS object to JSON</h3>  
+  <ul>
+    <li ng-repeat="z in prices">
+      {{ z | json }}
+    </li>
+  </ul>
+</div>
+
+</body>
+
+<script src="thisApp.js"></script>
+<script src="thisControlHash.js"></script>
+
+</html>

@@ -21,7 +21,7 @@
 <h2>AngularJS Notes</h2>
 <!--this is the owner of the application-->
 
-  <!--this invokes a directive in lc-lc format-->
+  <!--this invokes a directive as an element, in lc-lc format-->
   <test-directive></test-directive>
 
 </body>
@@ -31,6 +31,8 @@ var app = angular.module("thisApp", []);
 //this adds a callback to the directive in camelCase
 app.directive("testDirective", function () {
   return {
+    restrict: "E",//restricts invokation to element only
+    //other restrictions: A for attr, C for class, M for comment  
     template : "<h1>custom directive!</h1>"
   };
 });

@@ -21,7 +21,7 @@
 <h2>AngularJS Notes</h2>
 <!--this is the owner of the application-->
 <!--declaring a variable firstName, assigning-->
-<div ng-app="" ng-init="firstName='Joseph'">
+<div ng-app="thisApp" ng-controller="thisController">
   <h3>dynamic getting &amp; writing with ng-model &amp; ng-bind</h3>
   <!--this binds the value of the input field
       to the application variable name1-->
@@ -30,12 +30,7 @@
       to the application variable name1-->
   <p ng-bind="name1"></p>
   <!--same-->
-  <h3>writing ng-init initialized variable into HTML</h3>
-  <p>my name is: <span ng-bind="firstName"></span></p>
-
-  <h3>interpolate expressions into HTML with double curly brackets</h3>
-  <p>5 + 5 = {{ 5 + 5 }}</p>
-  <p>that name again is: {{ firstName }}</p>
+  
 </div>
 
 
@@ -43,7 +38,11 @@
 
 </body>
 
-<script src="#">
+<script>
+var app = angular.module("thisApp", []);
+app.controller("thisController", function($scope) {
+  $scope.name1 = "enter some text";
+});
 </script>
 
 </html>

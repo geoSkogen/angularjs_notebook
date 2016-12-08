@@ -1,0 +1,21 @@
+//data model
+
+
+var app = angular.module('thisApp', []);
+app.controller('thisController', function ($scope) {
+  $scope.propname = "lmnop";
+});
+
+//ng-bind directive binds the innerHTML of the element to the
+//js var as a property of $scope
+
+//{{propname}} between HTML tags will display var data from $scope
+
+//ng-model directive provides two-way binding for HTML controls
+
+//now run the above script with this markup:
+
+<div ng-app="thisApp" ng-controller="thisController">
+  <input ng-model="propname" type="text"/><br/>
+  <p ng-bind="propname"></p>
+</div>
