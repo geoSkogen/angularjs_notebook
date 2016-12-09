@@ -20,25 +20,13 @@
 <body>
 
 <!--this defines a module and adds a controller-->
+<h3>angular select&mdash;options</h3>
 <div ng-app="thisApp2" ng-controller="thisControlHash">
-<h3>order by last name</h3>
-  <ul>
-    <li ng-repeat="x in names | orderBy:'lname'">
-      {{ x.lname + ', ' + x.fname + ': ' + x.dept }}
-    </li>
-  </ul>
-<h3>convert number to currency</h3>
-  <ul>
-    <li ng-repeat="y in prices">
-      {{ y.day | currency}}, {{ y.month | currency}}, {{ y.year | currency}}
-    </li>
-  </ul>
-<h3>convert JS object to JSON</h3>
-  <ul>
-    <li ng-repeat="z in prices">
-      {{ z | json }}
-    </li>
-  </ul>
+  <select ng-model="selectEmployee" ng-options="x.fname for x in names"></select>
+<h3>selected: {{ selectEmployee.fname}} {{ selectEmployee.lname}}</h3>
+<h3>department: {{ selectEmployee.dept}}</h3>
+<!--<select ng-model="selectedAlbum" ng-options="x for (x, y) in albums"></select>
+<h3>selection: {{ selectedAlbum }}</h3>-->
 </div>
 
 </body>

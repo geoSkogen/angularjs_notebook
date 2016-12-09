@@ -18,27 +18,21 @@
 </head>
 
 <body>
-
+<h3>change reorder by column selected</h3>
 <!--this defines a module and adds a controller-->
 <div ng-app="thisApp2" ng-controller="thisControlHash">
-<h3>order by last name</h3>
-  <ul>
-    <li ng-repeat="x in names | orderBy:'lname'">
-      {{ x.lname + ', ' + x.fname + ': ' + x.dept }}
-    </li>
-  </ul>
-<h3>convert number to currency</h3>
-  <ul>
-    <li ng-repeat="y in prices">
-      {{ y.day | currency}}, {{ y.month | currency}}, {{ y.year | currency}}
-    </li>
-  </ul>
-<h3>convert JS object to JSON</h3>
-  <ul>
-    <li ng-repeat="z in prices">
-      {{ z | json }}
-    </li>
-  </ul>
+<table>
+  <tr>
+    <th ng-click="changeOrder('lname')">Last</th>
+    <th ng-click="changeOrder('fname')">First</th>
+    <th ng-click="changeOrder('dept')">Department</th>
+  </tr>
+  <tr ng-repeat="x in names | orderBy: selectOrder">
+    <td>{{x.lname}}</td>
+    <td>{{x.fname}}</td>
+    <td>{{x.dept}}</td>
+  </tr>
+</table>
 </div>
 
 </body>

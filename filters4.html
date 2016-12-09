@@ -18,25 +18,12 @@
 </head>
 
 <body>
-
+<h3>custom filter</h3>
 <!--this defines a module and adds a controller-->
 <div ng-app="thisApp2" ng-controller="thisControlHash">
-<h3>order by last name</h3>
   <ul>
-    <li ng-repeat="x in names | orderBy:'lname'">
-      {{ x.lname + ', ' + x.fname + ': ' + x.dept }}
-    </li>
-  </ul>
-<h3>convert number to currency</h3>
-  <ul>
-    <li ng-repeat="y in prices">
-      {{ y.day | currency}}, {{ y.month | currency}}, {{ y.year | currency}}
-    </li>
-  </ul>
-<h3>convert JS object to JSON</h3>
-  <ul>
-    <li ng-repeat="z in prices">
-      {{ z | json }}
+    <li ng-repeat="x in namesKit">
+      {{ x | customFilter }}
     </li>
   </ul>
 </div>

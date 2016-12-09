@@ -20,25 +20,16 @@
 <body>
 
 <!--this defines a module and adds a controller-->
+<h3>angular services</h3>
 <div ng-app="thisApp2" ng-controller="thisControlHash">
-<h3>order by last name</h3>
-  <ul>
-    <li ng-repeat="x in names | orderBy:'lname'">
-      {{ x.lname + ', ' + x.fname + ': ' + x.dept }}
-    </li>
-  </ul>
-<h3>convert number to currency</h3>
-  <ul>
-    <li ng-repeat="y in prices">
-      {{ y.day | currency}}, {{ y.month | currency}}, {{ y.year | currency}}
-    </li>
-  </ul>
-<h3>convert JS object to JSON</h3>
-  <ul>
-    <li ng-repeat="z in prices">
-      {{ z | json }}
-    </li>
-  </ul>
+  <p>this URL:</p>
+  <p>{{ thisUrl }}</p>
+  <p>set timeout:</p>
+  <h1>{{ thisHeader }}</h1>
+  <p>look at the time!</p>
+  <h1>{{ thisTime }}</h1>
+  <p>custom service filter&mdash;convert decimal to hex:</p>
+  <p>{{ 225 | hexFormat }}</p>
 </div>
 
 </body>
