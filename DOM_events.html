@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="#"/>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+
+</head>
+
+<body>
+
+
+<h3>angular DOM2</h3>
+<div ng-app="thisApp2" ng-controller="thisControlHash">
+  <h1 style="cursor: pointer;" ng-mouseover="mouseovers = mouseovers + 1">
+    count the mouseovers
+  </h1>
+  <h3 ng-show="togState">mouseovers: {{ mouseovers }}</h3>
+  <h1 style="cursor: pointer;" ng-mousemove="mousemoves = mousemoves + 1">
+    count the mousemoves
+  </h1>
+  <h3 ng-show="togState">mousemoves: {{ mousemoves }}</h3>
+  <br/>
+  <button ng-click="showToggle()">{{ togName }}</button>
+  <p>{{ test }}</p>
+</div>
+</body>
+
+<script src="thisApp.js"></script>
+<script src="thisControlHash.js"></script>
+
+</html>

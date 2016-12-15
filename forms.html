@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="#"/>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+
+</head>
+
+<body>
+
+<!--this defines a module and adds a controller-->
+<h3>form</h3>
+<div ng-app="thisApp2" ng-controller="thisControlHash">
+  <form novalidate>
+    first:<br/>
+    <input type="text" ng-model="user.firstName"/><br/>
+    last:<br/>
+    <input type="text" ng-model="user.lastName"/><br/>
+    <br/>
+    <button ng-click="reset()">start over</button>
+  </form>
+  <br/>
+  <p> {{ user }}</p>
+  <p> {{ master }}</p>
+  <form name="thisForm">
+    <input name="thisInput" ng-model="thisInput" required>
+  </form>
+  <br/>
+  <p>valid field?: {{ thisForm.thisInput.$valid }}</p>
+</div>
+
+</body>
+
+<script src="thisApp.js"></script>
+<script src="thisControlHash.js"></script>
+
+</html>
