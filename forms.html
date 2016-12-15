@@ -11,6 +11,17 @@
 
 <link rel="stylesheet" href="#"/>
 
+<style>
+input.ng-invalid {
+    border: 2px solid red;
+    background-color: pink;
+}
+input.ng-valid {
+    background-color: white;
+    border: 2px solid lightsteelblue;
+}
+</style>
+
 <script
   src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
 </script>
@@ -34,10 +45,22 @@
   <p> {{ user }}</p>
   <p> {{ master }}</p>
   <form name="thisForm">
+    <span>nothing</span><br/>
     <input name="thisInput" ng-model="thisInput" required>
+    <span ng-show="thisForm.thisInput.$touched && thisForm.thisInput.$invalid">
+     nothing is required</span><br/>
+    <span>email</span><br/>
+    <input name="emailInput" ng-model="emailInput" type="email" required/>
+    <span ng-show="thisForm.emailInput.$touched && thisForm.emailInput.$invalid">
+     email is required</span>
+     <br/>
+     <br/>
+     <p>bullshit</p>
+     <input name="scorePut" ng-model="scorePut" required req-underscore/>
   </form>
   <br/>
   <p>valid field?: {{ thisForm.thisInput.$valid }}</p>
+  <p>valid email?: {{ thisForm.emailInput.$valid }}</p>
 </div>
 
 </body>

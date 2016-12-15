@@ -25,6 +25,22 @@ app2.filter('hexFormat', ['hexafy', function(hexafy) {
     return hexafy.toHex(x);
   };
 }]);
+app2.directive('reqUnderscore', function () {
+  return {
+    require: 'ngModel',
+    link: function(scope, element, attr, mCtrl) {
+      function checkScore(value) {
+        if (value.indexOf("_") > -1) {
+          mCtrl.$setValidity('theScore', true);
+        } else {
+          mCtrl.$setValidity('theScore', false);
+        }
+        return value;
+      }
+      mCtrl.$parsers.push(checkScore);
+    }
+  };
+});
 
 var appColor = angular.module("appColor", []);
 appColor.run(function ($rootScope) {
