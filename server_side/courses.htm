@@ -1,0 +1,15 @@
+<h3>courses</h3>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>course name</th>
+        <th>CRN</th>
+        <th>instructor</th>
+    </tr>
+    <tr ng-repeat="course in student.courses">
+        <td>{{ course.ID }}</td>
+        <td>{{ course.name }}</td>
+        <td>{{ course.CRN }}</td>
+        <td>{{ course.prof }}</td>
+    </tr>
+</table>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="includes.css"/>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+
+</head>
+
+<body>
+
+<h2>angular sample app</h2>
+<h5>&nbsp;&mdash;&nbsp;one day this page'll be great&nbsp;&mdash;&nbsp;</h5>
+<div ng-app="mainApp" ng-controller="studentControl">
+    <div ng-include="'main.htm'"></div>
+    <div ng-include="'courses.htm'"></div>
+</div>
+
+</body>
+
+<script src="mainApp.js"></script>
+<script src="studentControl.js"></script>
+
+</html>

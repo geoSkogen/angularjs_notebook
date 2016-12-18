@@ -26,14 +26,13 @@ app2.controller("thisControlHash", function ($scope, $location,  $timeout, $inte
     "Ana",
     "Orbelina"
   ];
-  //this object assignment breaks the script and I don't know why.
-  /*$scope.albums = {
-    Upsilon Acrux: "Radian Futura",
-    Secret Chiefs III: "Book of Horizons",
-    Kayo Dot: "Choirs of the Eye",
-    Sleepytime Gorilla Museum: "In Glorious Times",
-    Animals as Leaders: "Weightless"
-  };*/
+  $scope.albums = {
+    UpsilonAcrux: "Radian Futura",
+    SecretChiefsIII: "Book of Horizons",
+    KayoDot: "Choirs of the Eye",
+    SleepytimeGorillaMuseum: "In Glorious Times",
+    AnimalsAsLeaders: "Weightless"
+  };
 $scope.master = { firstName: "enter first name", lastName: "enter last name"};
 $scope.reset = function () {
   $scope.user = angular.copy($scope.master);

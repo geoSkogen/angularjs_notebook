@@ -22,11 +22,13 @@
 <!--this defines a module and adds a controller-->
 <h3>angular select&mdash;options</h3>
 <div ng-app="thisApp2" ng-controller="thisControlHash">
+  <h4>employees</h4>
   <select ng-model="selectEmployee" ng-options="x.fname for x in names"></select>
-<h3>selected: {{ selectEmployee.fname}} {{ selectEmployee.lname}}</h3>
+<h3>name: {{ selectEmployee.fname}} {{ selectEmployee.lname}}</h3>
 <h3>department: {{ selectEmployee.dept}}</h3>
-<!--<select ng-model="selectedAlbum" ng-options="x for (x, y) in albums"></select>
-<h3>selection: {{ selectedAlbum }}</h3>-->
+<h4>artists</h4>
+<select ng-model="selectedAlbum" ng-options="x for (x, y) in albums"></select>
+<h3>album: {{ selectedAlbum }}</h3>
 </div>
 
 </body>
