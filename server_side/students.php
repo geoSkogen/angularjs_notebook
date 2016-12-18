@@ -1,4 +1,4 @@
-[
+ { "names" : [
   {
     "first" : "Junior",
     "middle" : "Manx",
@@ -19,4 +19,4 @@
     "middle" : "Terwilliger",
     "last" : "Fudgouew"  
   }
-]
+]}

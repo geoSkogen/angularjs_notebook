@@ -1,6 +1,9 @@
-var ins = document.getElementsByTagName('input');
-var prompts = ['enter first name','enter last name'];
-for (var i = 0; i < prompts.length; i++) {
+window.onload = function () {
+
+var ins = document.getElementsByClassName('blankMe');
+var prompts = [""];
+for (var i = 0; i < 2; i++) {
+  prompts[i] = ins[i].value;
   assignClear(ins[i],prompts[i]);
 }
 function assignClear(input, prompt) {
@@ -10,4 +13,3 @@ function assignClear(input, prompt) {
     }
   }
 }
-//document.getElementById('testMe').innerHTML = "this";

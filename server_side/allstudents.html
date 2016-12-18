@@ -19,21 +19,27 @@
 
 <body>
 
-<h2>angular sample app 2</h2>
+<h2>Angular sample app2</h2>
 <h5>&nbsp;&mdash;&nbsp;one day this page'll be great&nbsp;&mdash;&nbsp;</h5>
-<div>
+<div ng-app="allstudentsApp" ng-controller="allstudentsControl">
     <table>
       <tr>
         <th>first</th>
         <th>middle</th>
         <th>last</th>
       </tr>
+      <tr ng-repeat="x in thisData">
+        <td>{{ x.first }}</td>
+        <td>{{ x.middle }}</td>
+        <td>{{ x.last }}</td>
+      </tr>
     </table>
-    <div class="test"></div>
 </div>
+<div id="test"></div>
 
 </body>
 
-<script src="ajaxScript.js"></script>
+<script src="allstudentsApp.js"></script>
+<script src="allstudentsControl.js"></script>
 
 </html>
