@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="#"/>
+
+</style>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js">
+</script>
+
+</head>
+
+<body>
+
+<h3>angular views using template</h3>
+<div ng-app="viewsMainApp">
+  <p><a href="#/">main</a></p>
+  <p><a href="#motorhead">motorhead</a></p>
+  <p><a href="#blacksabbath">black sabbath</a></p>
+  <div ng-view></div>
+  <p></p>
+</div>
+</body>
+
+<script>
+var viewsMainApp = angular.module("viewsMainApp", ['ngRoute']);
+viewsMainApp.config(function ($routeProvider) {
+  $routeProvider
+  .when('/', {
+    template: "<h1>NOTHING!</h1>"
+  })
+  .when('/motorhead', {
+    template: "<h1>MOTORHEAD!</h1><p>Ace of Spades</p>"
+  })
+  .when('/blacksabbath', {
+    template: "<h1>BLACK SABBATH!</h1><p>Paranoid</p>"
+  });
+});
+
+viewsMainApp.controller('motorheadController', function ($scope) {
+  $scope.message =
+  ". . . the rider wearing black &mdash; don't you know he's gonna shoot you in the back";
+});
+
+viewsMainApp.controller('blacksabbathController', function ($scope) {
+  $scope.message =
+  "Politicians hide themselves away<br/>They only started the war<br/>Why don't they go out too and fight?<br/>They leave that up to the poor.";
+});
+
+
+</script>
+
+</html>

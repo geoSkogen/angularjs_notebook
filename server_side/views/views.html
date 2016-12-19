@@ -11,15 +11,6 @@
 
 <link rel="stylesheet" href="#"/>
 
-<style>
-input.ng-invalid {
-    border: 2px solid red;
-    background-color: pink;
-}
-input.ng-valid {
-    background-color: white;
-    border: 2px solid lightsteelblue;
-}
 </style>
 
 <script
@@ -33,16 +24,13 @@ input.ng-valid {
 
 <body>
 
-<!--this defines a module and adds a controller-->
-<h3>views</h3>
+<h3>angular views using templateUrl</h3>
 <div ng-app="viewsMainApp">
   <p><a href="#/">main</a></p>
   <p><a href="#motorhead">motorhead</a></p>
   <p><a href="#blacksabbath">black sabbath</a></p>
   <div ng-view></div>
 </div>
-<p id="testMe"></p>
-<p id="testMe2"></p>
 </body>
 
 <script src="viewsMainApp.js"></script>
