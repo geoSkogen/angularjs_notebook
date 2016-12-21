@@ -31,8 +31,8 @@ var app = angular.module("thisApp", []);
 //this adds a callback to the directive in camelCase
 app.directive("testDirective", function () {
   return {
-    restrict: "E",//restricts invokation to element only
-    //other restrictions: A for attr, C for class, M for comment  
+    restrict: "E",//restricts invokation to html element only
+    //other restrictions: A for attr, C for class, M for comment
     template : "<h1>custom directive!</h1>"
   };
 });
