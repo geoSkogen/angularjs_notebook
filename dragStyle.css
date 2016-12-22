@@ -1,0 +1,23 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+.rp {
+  background-color: lightsteelblue;
+  border: 2px solid black;
+  padding: 6px;
+  font-weight: 600;
+  font-family: Helvetica, sans-serif;
+  cursor: pointer;
+  position: relative;
+  width: 112px;
+  text-align: center;
+}
+
+.rp:hover {
+  background-color: orange;
+}
