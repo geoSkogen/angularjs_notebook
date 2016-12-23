@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="dragStyle.css"/>
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+<title>angular panes</title>
+</head>
+<body>
+  <h2>angular panes</h2>
+    <div ng-app="docTabs">
+    <my-tabs>
+    <my-pane title="Dylan">
+      <p>ghost electricity howls in the bones of her face</p>
+    </my-pane>
+    <my-pane title="Bowie">
+      <p>hunt you to the ground they will, mannequins with kill-appeal</p>
+      <p><a href="" ng-click="i = i + 1">counter: {{ i || 0 }}</a></p>
+    </my-pane>
+  </my-tabs>
+  </div>
+  <p id="testMe"></p>
+
+</body>
+</html>
+<script src=panesScript.js></script>
