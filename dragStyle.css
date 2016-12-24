@@ -4,8 +4,9 @@ body {
 
 h2 {
   text-align: center;
+}h3 {
+  text-align: center;
 }
-
 .rp {
   background-color: lightsteelblue;
   border: 2px solid black;
