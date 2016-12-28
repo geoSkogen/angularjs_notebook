@@ -21,7 +21,13 @@
       <h2>root scope <tt>AN EVENT</tt> count: {{ count }}</h2>
       <ul>
         <li ng-repeat="i in [1]" ng-controller="eventController">
+          <!--$emit dispatches an event at the scope level
+              upon which it was called,
+              and so forth upward to all parent scopes-->
           <button ng-click="$emit('anEvent')">$emit('anEvent')</button>
+          <!--$broadcast dispatches an event at the scope level
+              upon which it was called,
+              and so forth downward to all child scopes-->
           <button ng-click="$broadcast('anEvent')">$broadcast('anEvent')</button>
           <br/>
           <h3>middle scope <tt>AN EVENT</tt> count: {{ count }}</h3>
@@ -34,7 +40,6 @@
       </ul>
     </div>
   </div>
-
 </body>
 
 <script src="scopeTreeEvents.js">
