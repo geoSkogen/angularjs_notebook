@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="#"/>
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+</head>
+
+<body>
+  <div ng-app="scopeTreeEvents">
+    <div ng-controller="eventController">
+      <h2>root scope <tt>AN EVENT</tt> count: {{ count }}</h2>
+      <li ng-repeat="i in [1]" ng-controller="eventController">
+        <button ng-click="$emit('anEvent')">$emit('anEvent')</button>
+        <button ng-click="$broadcast('anEvent')">$broadcast('anEvent')</button>
+        <br/>
+        <h3>middle scope <tt>AN EVENT</tt> count: {{ count }}</h3>
+        <ul>
+        <li ng-repeat="item in [1,2]" ng-controller="eventController">
+          <h4>leaf scope <tt>AN EVENT</tt> count: {{ count }}</h4>
+        </li>
+      </ul>
+    </li>
+  </div>
+</div>
+
+</body>
+
+<script src="scopeTreeEvents.js">
+</script>
+
+</html>

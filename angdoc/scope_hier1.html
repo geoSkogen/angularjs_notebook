@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="scope_hier1_styles.css"/>
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+</head>
+
+<body>
+<div ng-app="scopeHier1App">
+  <div ng-controller="greetController">
+    <p id="greeting">hello {{ name }}</p>
+  </div>
+  <div ng-controller="listController">
+    <span>
+    <ol>
+      <li ng-repeat="name in names">{{ name }} from {{ department }}</li>
+    </ol>
+  </div>
+</div>
+<p id="testMe"></p>
+</body>
+</html>
+
+<script src="scopeHier1Script.js">
+</script>

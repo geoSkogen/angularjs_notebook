@@ -1,0 +1,7 @@
+#greeting,
+ol,
+ol li {
+    border: 1px solid red;
+    margin: 3px;
+    padding: 3px;
+}
