@@ -1,10 +1,8 @@
 <div class="flexOuterLeft">
   <div class="flexInner">
-      <span>search:</span><br/>
-      <input type="text" ng-model="$ctrl.query"/>
-  </div>
-  <div class="flexInner">
-    <p>sort by:</p>
+    <span>search:</span><br/>
+    <input type="text" ng-model="$ctrl.query"/><br/>
+    <span>sort by:</span>
     <select ng-model="$ctrl.orderSel">
         <option value="title">alphabetical - title</option>
         <option value="artist">alphabetical - artist</option>
@@ -12,14 +10,25 @@
     </select>
   </div>
   <div class="flexInner">
-    <div class="columnar">
+   <!-- <div class="columnar"> -->
     <ul>
  <!--$ctrl is the default alias of this component's controller instance-->
-      <li ng-repeat="album in $ctrl.albums | filter: $ctrl.query | orderBy: $ctrl.orderSel">
-        <span><em>{{ album.title }}</em></span>
-        <p>&mdash; {{ album.artist }}</p>
+      <li class="liOuter"ng-repeat="album in $ctrl.albums | filter: $ctrl.query | orderBy: $ctrl.orderSel">
+        <div class="liInner">
+          <a href="#!/albums/{{ album.albumId }}">
+            <img ng-src="{{ album.imgUrl }}" alt="{{ album.title }}" class="thumb"/><br/>
+          </a>
+        </div>    
+        <div class="liInner">
+          <a href="!/albums/{{ album.albumId }}"> 
+            <span class="linky">{{ album.title }}</span>
+          </a>
+          <p class="artist">{{ album.artist }}</p>
+          <p class="infoC">{{ album.year }}</p>
+          <p class="infoC">label</p>
+        </div>
       </li>
     </ul>
-   </div>
+  <!-- </div> -->
   </div>
 </div>

@@ -14,18 +14,28 @@
 <!--<script
   src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
 </script>-->
-  <script src="Angular.js">
+  <script src="angular.js">
+  </script>
+  <script src="angular-route.js">
   </script>
   <script src="components.module.js">
   </script>
-  <script src="components.components.js">
+  <script src="components.config.js">
+  </script>
+  <script src="album-list.module.js">
+  </script>
+  <script src="album-list.components.js">
+  </script>
+  <script src="album-details.module.js">
+  </script>
+  <script src="album-details.components.js">
   </script>
 
 
 </head>
 
 <body>
-  <album-list></album-list>
+    <div ng-view></div>
   <p id="testMe"></p>
 </body>
 
