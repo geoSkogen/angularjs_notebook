@@ -4,7 +4,7 @@ angular.module("listCompApp").config(['$locationProvider', '$routeProvider',
 
         $routeProvider.
           when('/', {
-              template: '<p>where did everybody go?</p>'
+              templateUrl: 'landing-page.html'
           }).
           when('/albums', {
               template: '<album-list></album-list>'

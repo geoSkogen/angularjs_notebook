@@ -1,11 +1,18 @@
 body {
     font-family:  Arial, sans-serif;
+    position:  relative;
 }
 
 div.flexOuterLeft {
     display:  flex;
     flex-flow:  row wrap;
     justify-content: flex-start;
+}
+
+div.flexOuterCenter {
+    display:  flex;
+    flex-flow:  row wrap;
+    justify-content: center;
 }
 
 div.flexInner {
@@ -76,12 +83,27 @@ p.infoC {
 
 a:link {
     text-decoration: none;
+    color:  cornflowerblue;
 }
 
 span.linky {
     font-size:  17px;
-    margin-top: 0.2em;
-    midth: 3em;
-    
+    margin-top: 0.2em;   
+}
+
+a.titleLink {
+    text-align:  center;
+}
+
+
+div.pictureFrame {
+    margin-top: 10%;
+    border:  1px solid lightsteelblue;
+    border-radius:  2px;
+    padding:  0 0.8em 0.8em 0.8em;
+}
+
+h3 {
+   text-align: center;
 }
 
