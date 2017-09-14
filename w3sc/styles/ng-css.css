@@ -39,15 +39,13 @@ a:active {
 }
 
 .navBoxInner {
-  padding: 1em 0.3em 0 0.3em;
   position: absolute;
- 
 }
 
 .flexOuterColumn {
   flex-flow: column wrap;
   width: 724px;
-  height: 420px;
+  height: 440px;
 
 }
 
