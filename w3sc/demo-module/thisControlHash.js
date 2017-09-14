@@ -7,10 +7,10 @@ app2.controller("thisControlHash", function ($scope, $location,  $timeout, $inte
   $scope.test = "_X_";
   //place hashes into an array
   $scope.names = [
-    {lname: 'Redjyk', fname: 'Magda', dept: 'Produce'},
-    {lname: 'Glazier', fname: 'Stephanie', dept: 'Beer & Wine'},
-    {lname: 'Ricker', fname: 'Chase', dept: 'Prepared Foods'},
-    {lname: 'Garcia', fname: 'Marc', dept: 'Bakery'},
+    {lname: 'Oxygen', fname: 'Elmo', dept: 'Produce'},
+    {lname: 'Slothrop', fname: 'Tyrone', dept: 'Beer & Wine'},
+    {lname: 'Flanders', fname: 'Ned', dept: 'Prepared Foods'},
+    {lname: 'Zim', fname: 'Invader', dept: 'Bakery'},
   ];
   $scope.prices = [
     {day: 60, month: 750, year: 7000},

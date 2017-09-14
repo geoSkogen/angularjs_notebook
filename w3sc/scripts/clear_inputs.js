@@ -1,4 +1,4 @@
-window.onload = function () {
+window.addEventListener("load", function () {
 
 var ins = document.getElementsByClassName('blankMe');
 var prompts = [""];
@@ -13,3 +13,4 @@ function assignClear(input, prompt) {
     }
   }
 }
+})
