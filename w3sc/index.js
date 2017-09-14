@@ -7,7 +7,6 @@ function initIndex() {
 var app = document.getElementById("app")
 
 var docs =[
-"index.html",
 "demo.html",
 "css_ang.html",
 "directive_custom.html",
@@ -24,24 +23,27 @@ var docs =[
 "DOM_events2.html",
 "DOM_show_hide_disable.html",
 "scope_rootvscntrl.html",    
-"mod_cntrl.html",
 "mod_cntrl_1.html",
-"mod_cntrl_2.html",
-"index.html"
+"mod_cntrl_2.html"
 ]
 
   function buildNavBox() {
+	var flexcont = document.createElement("div")
 	var div = document.createElement("div")
-	div.className = "navBox"
-	return div
+	div.className = "navBoxOuter"
+	flexcont.className = "flexOuterCenter"
+	flexcont.appendChild(div)
+	return flexcont
   }
   
   function buildLinkTree(urls) {
 	var newdiv
 	var newa
 	var newtext
+	var navbox = document.createElement("div")
 	var flexcont = document.createElement("div")
 	flexcont.className = "flexOuterColumn"
+	navbox.className = "navBoxInner"
 	for (let i = 0; i < urls.length; i++) {
 	  newdiv = document.createElement("div")
 	  newa = document.createElement("a")
@@ -51,9 +53,10 @@ var docs =[
 	  newa.setAttribute("href", urls[i])
 	  newa.appendChild(newtext)
 	  newdiv.appendChild(newa)
-	  flexcont.appendChild(newdiv)  
+	  flexcont.appendChild(newdiv)
+	  navbox.appendChild(flexcont)
 	}
-	return flexcont
+	return navbox
   }
   
   function initLinkTree() {
