@@ -1,6 +1,7 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
 }
+
 h2,
 h3 {
   text-align: center;
@@ -27,15 +28,15 @@ a:active {
 .flexOuterColumn {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;    
+  justify-content: center;
 }
 
 .navBoxOuter {
   position: relative;
-  background: url(../../images/oil.png) center;
-  width: 724px; 
+  background: url(../images/oil.png) center;
+  width: 724px;
   height: 453px;
- 
+
 }
 
 .navBoxInner {
@@ -80,5 +81,5 @@ a:active {
 }
 
 #draglink {
-  color: cornflowerblue;	
+  color: cornflowerblue;
 }
