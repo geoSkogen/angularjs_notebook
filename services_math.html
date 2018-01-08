@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="#"/>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+
+</head>
+
+<body>
+
+<h3>angular services</h3>
+<div ng-app="serviceMathApp" ng-controller="serviceMathControl">
+  <p>enter number:
+    <input type="number" ng-model="thisNum"/>
+    <button ng-click="square()">X<sup>2</sup></button>
+    <p>square: {{ result }}</p>
+  </p>
+</div>
+
+</body>
+
+<script src="math-services/serviceMathApp.js"></script>
+<script src="math-services/serviceMathControl.js"></script>
+
+</html>

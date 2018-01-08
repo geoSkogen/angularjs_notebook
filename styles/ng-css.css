@@ -1,0 +1,84 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+h2,
+h3 {
+  text-align: center;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.flexOuterCenter,
+.flexOuterColumn {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;    
+}
+
+.navBoxOuter {
+  position: relative;
+  background: url(../../images/oil.png) center;
+  width: 724px; 
+  height: 453px;
+ 
+}
+
+.navBoxInner {
+  position: absolute;
+}
+
+.flexOuterColumn {
+  flex-flow: column wrap;
+  width: 724px;
+  height: 440px;
+
+}
+
+.linkBranch {
+  padding: 0.5em;
+  margin: 0.3em 0.5em;
+  background-color: gainsboro;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: bold;
+  opacity: 0.55;
+}
+
+.linkBranch:hover {
+  opacity: 0.95;
+}
+
+.rp {
+  background-color: lightsteelblue;
+  border: 2px solid black;
+  padding: 6px;
+  font-weight: 600;
+  font-family: Helvetica, sans-serif;
+  cursor: pointer;
+  position: relative;
+  width: 112px;
+  text-align: center;
+}
+
+.rp:hover {
+  background-color: orange;
+}
+
+#draglink {
+  color: cornflowerblue;	
+}

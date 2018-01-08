@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="#"/>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+
+</head>
+
+<body>
+
+<!--I don't quite get this-->
+<!--OK, now I get it-->
+<h3>angular DOM</h3>
+<div ng-app="" ng-init="switch=true">
+  <p><button ng-disabled="switch">don't click</button></p>
+  <p><input type="checkbox" ng-model="switch"/>button</p>
+  <p>{{ switch }}</p>
+</div>
+
+<div ng-app="" ng-init="num=13">
+  <p ng-show="num > 12">ng-show expression evaluates to true</p>
+  <p ng-hide="num < 12">ng-hide expression evaluates to false</p>
+</div>
+</body>
+
+<script src="demo-module/thisApp.js"></script>
+<script src="demo-module/thisControlHash.js"></script>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="#"/>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+
+</head>
+
+<body>
+<h2>bind HTML input value to JS vars to CSS values</h2>
+<!--this assigns a CSS value to a variable-->
+<div ng-app="" ng-init="myCol='lightsteelblue'">
+  <!--this assigns a JS variable to the CSS property
+      then binds the input value to JS variable myCol
+      then interpolates that value into the input-->
+  <input style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
+  <!--the result? the CSS value entered
+      into the input renders in the browser-->
+</div>
+
+
+
+
+</body>
+
+<script>
+
+</script>
+
+</html>

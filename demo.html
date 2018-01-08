@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="#"/>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+
+</head>
+
+<body>
+<h2>AngularJS Notes</h2>
+<!--this is the owner of the application-->
+<!--declaring a variable firstName, assigning-->
+<div ng-app="thisApp" ng-controller="thisController">
+  <h3>dynamic getting &amp; writing with ng-model &amp; ng-bind</h3>
+  <!--this binds the value of the input field
+      to the application variable name1-->
+  <p>enter some text <input type="text" ng-model="name1"/></p>
+  <!--this binds the innerHTML of its element
+      to the application variable name1-->
+  <p ng-bind="name1"></p>
+  <!--same-->
+  
+</div>
+
+
+
+
+</body>
+
+<script>
+var app = angular.module("thisApp", []);
+app.controller("thisController", function($scope) {
+  $scope.name1 = "enter some text";
+});
+</script>
+
+</html>

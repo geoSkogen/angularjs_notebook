@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="#"/>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+
+</head>
+
+<body>
+
+<!--this defines a module and adds a controller-->
+<div ng-app="appColor">
+  <p> var color in root scope</p>
+  <p>{{ color }}</p>
+  <div ng-controller="controlColor">
+    <h3>var color in controller scope</h3>
+    <p>{{ color }}</p>
+  </div>
+  <p> var color in root scope</p>
+  <p>{{ color }}</p>
+</div>
+
+</body>
+
+<script src="demo-module/thisApp.js"></script>
+<script src="demo-module/controlColor.js"></script>
+
+</html>

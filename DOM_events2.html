@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="#"/>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+
+</head>
+
+<body ng-app="">
+
+
+<h3>angular DOM3</h3>
+<form>
+  <input type="radio" ng-model="topic" value="musicTheory"/>Music Theory
+  <input type="radio" ng-model="topic" value="javaScript"/>JavaScript
+  <input type="radio" ng-model="topic" value="sociology"/>Sociology
+</form>
+<div ng-switch="topic">
+  <div ng-switch-when="musicTheory">
+  <h1>Music Theory</h1>
+  <h3></h3>
+  </div>
+  <div ng-switch-when="javaScript">
+  <h1>JavaScript</h1>
+  <h3></h3>
+  </div>
+  <div ng-switch-when="sociology">
+  <h1>Sociology</h1>
+  <h3></h3>
+  </div>
+</div>
+</body>
+
+<script src="demo-module/thisApp.js"></script>
+<script src="demo-module/thisControlHash.js"></script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="#"/>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+
+</head>
+
+<body>
+
+<!--this defines a module and adds a controller-->
+<h3>angular select&mdash;options</h3>
+<div ng-app="thisApp2" ng-controller="thisControlHash">
+  <h4>employees</h4>
+  <select ng-model="selectEmployee" ng-options="x.fname for x in names"></select>
+<h3>name: {{ selectEmployee.fname}} {{ selectEmployee.lname}}</h3>
+<h3>department: {{ selectEmployee.dept}}</h3>
+<h4>artists</h4>
+<select ng-model="selectedAlbum" ng-options="x for (x, y) in albums"></select>
+<h3>album: {{ selectedAlbum }}</h3>
+</div>
+
+</body>
+
+<script src="demo-module/thisApp.js"></script>
+<script src="demo-module/thisControlHash.js"></script>
+
+</html>

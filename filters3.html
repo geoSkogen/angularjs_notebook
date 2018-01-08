@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<link rel="stylesheet" href="#"/>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+
+</head>
+
+<body>
+<h3>change reorder by column selected</h3>
+<!--this defines a module and adds a controller-->
+<div ng-app="thisApp2" ng-controller="thisControlHash">
+<table>
+  <tr>
+    <th ng-click="changeOrder('lname')">Last</th>
+    <th ng-click="changeOrder('fname')">First</th>
+    <th ng-click="changeOrder('dept')">Department</th>
+  </tr>
+  <tr ng-repeat="x in names | orderBy: selectOrder">
+    <td>{{x.lname}}</td>
+    <td>{{x.fname}}</td>
+    <td>{{x.dept}}</td>
+  </tr>
+</table>
+</div>
+
+</body>
+
+<script src="demo-module/thisApp.js"></script>
+<script src="demo-module/thisControlHash.js"></script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+</title>
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+<link rel="stylesheet" href="#"/>
+<style>
+input.ng-invalid {
+  border: 2px solid red;
+}
+</style>
+</head>
+<body>
+  <h3>show app status</h3>
+  <form ng-app="" name="thisForm">
+    email:
+    <input type="email" name="myAddr" ng-model="field1" required/>
+    <br/>
+    <span ng-show="thisForm.myAddr.$error.email">get real</span>
+    <h1>app status</h1>
+    {{thisForm.myAddr.$valid}}
+    {{thisForm.myAddr.$dirty}}
+    {{thisForm.myAddr.$touched}}
+</form>
+
+</body>
+
+<script src="#">
+</script>
+
+</html>
