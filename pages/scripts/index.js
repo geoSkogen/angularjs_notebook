@@ -10,7 +10,7 @@ var docs =[
 "demo.html",
 "css_ang.html",
 "directive_custom.html",
-"directive_students.html",
+"directive_student.html",
 "services.html",
 "services_math.html",
 "filters.html",
